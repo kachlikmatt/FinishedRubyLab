@@ -1,0 +1,17 @@
+<h1>All Listings:</h1>
+
+<table>
+  <tr>
+    <th>Address:</th>
+    <th>Price:</th>
+    <th>Description:</th>
+  </tr>
+
+  <% @listings.each do |listing| %>
+    <tr>
+      <td><%= listing.address %></td>
+      <td><%= listing.price %></td>
+      <td><%= listing.description %></td>
+    </tr>
+  <% end %>
+</table>
