@@ -11,5 +11,6 @@
   <strong>Description:</strong>
   <%= @listing.description %>
 </p>
-<a href="/">Return to home </a>
-<a href="/listings">show all listings </a>
+<%= link_to 'Edit', edit_listing_path(@listing) %> |
+<%= link_to 'All Listings', listings_path %>
+<%= link_to 'Home', root_path %>

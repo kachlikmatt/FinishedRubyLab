@@ -6,12 +6,28 @@ class ListingsController < ApplicationController
     @listing = Listing.find(params[:id])
   end
   def new
+    @listing = Listing.new
   end
+  def edit
+    @listing = List.find(params[:id])
+  end  s
   def create
     @listing = Listing.new(listing_params)
 
-    @listing.save
+    if @listing.save
     redirect_to @listing
+    else
+      render 'new'
+    end
+  end
+  def update
+    @listing = Listing.find(params[:id])
+
+    if @listing.update(article_params)
+      redirect_to @listing
+    else
+      render 'edit'
+    end
   end
   private
   def listing_params
