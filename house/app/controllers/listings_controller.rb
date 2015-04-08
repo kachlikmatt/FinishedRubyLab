@@ -22,7 +22,7 @@ class ListingsController < ApplicationController
     @listing = Listing.new(listing_params)
 
     if @listing.save
-    redirect_to @listing
+      redirect_to @listing
     else
       render 'new'
     end
@@ -38,6 +38,6 @@ class ListingsController < ApplicationController
   end
   private
   def listing_params
-    params.require(:listing).permit(:address,:price,:description)
+    params.require(:listing).permit(:address,:price,:description,:time_stamp)
   end
 end

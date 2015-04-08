@@ -11,6 +11,10 @@
   <strong>Description:</strong>
   <%= @listing.description %>
 </p>
+<p>
+  <strong>Time created:</strong>
+  <%= @listing.time_stamp %>
+</p>
 <h2>Comments:</h2>
 <%= render @listing.comments %>
 
@@ -18,5 +22,5 @@
 <%= render 'comments/form' %>
 
 <%= link_to 'Edit', edit_listing_path(@listing) %> |
-<%= link_to 'All Listings', listings_path %>
+<%= link_to 'All Listings', listings_path %> |
 <%= link_to 'Home', root_path %>

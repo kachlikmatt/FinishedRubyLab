@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20150408002155) do
     t.string   "address"
     t.string   "price"
     t.string   "description"
+    t.datetime "time_stamp"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

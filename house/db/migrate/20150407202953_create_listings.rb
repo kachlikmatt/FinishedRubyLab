@@ -4,6 +4,7 @@ class CreateListings < ActiveRecord::Migration
       t.string :address
       t.string :price
       t.string :description
+      t.timestamp :time_stamp
 
       t.timestamps null: false
     end
