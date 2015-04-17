@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150414033937) do
+ActiveRecord::Schema.define(version: 20150415152255) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "commenter",  limit: 255
@@ -30,6 +30,14 @@ ActiveRecord::Schema.define(version: 20150414033937) do
     t.datetime "time_stamp"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "userName",   limit: 255
+    t.string   "password",   limit: 255
+    t.string   "email",      limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   add_foreign_key "comments", "listings"
